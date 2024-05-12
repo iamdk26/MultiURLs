@@ -8,7 +8,7 @@ echo -e $Yellow "
 | | | | |_| | | | |_| |     | |_| | |   | ||___ |
 |_|_|_|____/ \_) \__)_|     |____/|_|    \_|___/ 
                                                  
-           @imran407704 aka CyberSecOpS
+    @iamDK26 aka CISCO  Credits: @imran407704
 "
 
 # Check if the correct number of arguments is provided
