@@ -1,33 +1,31 @@
 #!/bin/bash
 
 echo -e $Yellow "
-
-███╗░░░███╗██╗░░░██╗██╗░░░░░████████╗██╗██╗░░░██╗██████╗░██╗░░░░░░██████╗
-████╗░████║██║░░░██║██║░░░░░╚══██╔══╝██║██║░░░██║██╔══██╗██║░░░░░██╔════╝
-██╔████╔██║██║░░░██║██║░░░░░░░░██║░░░██║██║░░░██║██████╔╝██║░░░░░╚█████╗░
-██║╚██╔╝██║██║░░░██║██║░░░░░░░░██║░░░██║██║░░░██║██╔══██╗██║░░░░░░╚═══██╗
-██║░╚═╝░██║╚██████╔╝███████╗░░░██║░░░██║╚██████╔╝██║░░██║███████╗██████╔╝
-╚═╝░░░░░╚═╝░╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░╚═════╝░╚═╝░░╚═╝╚══════╝╚═════╝░
-          
-    @iamDK26 aka CISCO  Credits: https://github.com/Imran407704
+             _       _                   _       
+            | |  _  (_)                 | |      
+ ____  _   _| |_| |_ _       _   _  ____| |  ___ 
+|    \| | | | (_   _) |     | | | |/ ___) | /___)
+| | | | |_| | | | |_| |     | |_| | |   | ||___ |
+|_|_|_|____/ \_) \__)_|     |____/|_|    \_|___/ 
+                                                 
+           @imran407704 aka CyberSecOpS
 "
 
 # Check if the correct number of arguments is provided
 if [ $# -ne 1 ]; then
-    echo "Usage: $0 <domain>"
+    echo "Usage: $0 <filename>"
     exit 1
 fi
 
-domain=$1
-
+filename=$1
 # Check if the target file exists in the current directory
-if [ ! -f "$domain.txt" ]; then
-    echo "Target file '$domain.txt' not found in the current directory."
+if [ ! -f "$filename" ]; then
+    echo "Target file '$filename' not found in the current directory."
     exit 1
 fi
 
 # Get the full path of the target file
-target="$(pwd)/$domain.txt"
+target="$(pwd)/$filename"
 
 printf "Total Targets: $(wc -l "$target" | awk '{print $1}')\n"
 mkdir -p multiurls
